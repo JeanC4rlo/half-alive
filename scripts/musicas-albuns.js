@@ -11,6 +11,7 @@ let audioAtual = -1;
 function rodarAudio() {
     botoesEl[audioAtual].setAttribute("src", estadosAudio[1]);
     
+    audioEl.muted = false;   
     audioEl.setAttribute("src", fontesAudio[audioAtual]);
     audioEl.load();
     audioEl.play();
