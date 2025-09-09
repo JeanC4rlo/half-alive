@@ -12,44 +12,44 @@ const fontesVideo = [
 ];
 
 let videoContador = 0;
-let totalVideos = fontesVideo.length;
+const totalVideos = fontesVideo.length;
+
+videoEl.muted = true;
 
 function rodarVideo() {
     videoEl.classList.remove("anim-intro-saida-video");
     videoEl.classList.add("anim-intro-entrada-video");
 
-    if(videoContador == 4) {
-        videoEl.volume = 0.3;
-    } else {
-        videoEl.volume = 0.5;
+    const volumeBaixo = [4, 6];
+    if (!videoEl.muted) {
+        videoEl.volume = volumeBaixo.includes(videoContador) ? 0.3 : 0.5;
     }
 
-    videoEl.setAttribute("src", fontesVideo[videoContador]);
+    videoEl.src = fontesVideo[videoContador];
     videoEl.load();
-    videoEl.play();
+    videoEl.play().catch((err) => {
+        console.warn("Erro ao tentar reproduzir vídeo:", err);
+    });
 }
 
-videoEl.addEventListener('ended', delayVideo, false);
+videoEl.addEventListener("ended", delayVideo);
 
 function delayVideo() {
     videoEl.classList.add("anim-intro-saida-video");
     videoEl.classList.remove("anim-intro-entrada-video");
 
     setTimeout(() => {
-        videoEl.setAttribute("src", "undefined");
+        videoEl.pause();
+        videoEl.removeAttribute("src");
+        videoEl.load();
+
         setTimeout(proximoVideo, 6000);
     }, 4600);
 }
 
 function proximoVideo() {
-    videoContador++;
-    if(videoContador == totalVideos) {
-        videoContador = 0;
-        rodarVideo(videoContador);
-    }
-    else {
-        rodarVideo(videoContador);
-    }
+    videoContador = (videoContador + 1) % totalVideos;
+    rodarVideo();
 }
 
 function inicializarVideos() {
@@ -60,4 +60,11 @@ function inicializarVideos() {
     }, 5000);
 }
 
-window.addEventListener("load", inicializarVideos);
+window.addEventListener("load", () => {
+    videoEl.muted = true;
+    inicializarVideos();
+
+    document.body.addEventListener("click", () => {
+        videoEl.muted = false;
+    }, { once: true });
+});
