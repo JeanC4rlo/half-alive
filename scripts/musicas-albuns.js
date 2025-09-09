@@ -2,8 +2,8 @@ const audioEl = document.querySelector("#audio");
 const botoesEl = document.querySelectorAll(".botoes-audio")
 
 const estadosAudio = [
-    "https://jeanc4rlo.github.io/imagens/misc/ui/play.png",
-    "https://jeanc4rlo.github.io/imagens/misc/ui/stop.png"
+    "https://jeanc4rlo.github.io/half-alive/imagens/misc/ui/play.png",
+    "https://jeanc4rlo.github.io/half-alive/imagens/misc/ui/stop.png"
 ]
 
 let audioAtual = -1;

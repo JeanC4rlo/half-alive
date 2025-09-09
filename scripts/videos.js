@@ -1,14 +1,14 @@
 const videoEl = document.querySelector("#intro-video");
 
 const fontesVideo = [
-    "https://jeanc4rlo.github.io/videos/sophies-house.webm",
-    "https://jeanc4rlo.github.io/videos/dimyu.webm",
-    "https://jeanc4rlo.github.io/videos/summerland.webm",
-    "https://jeanc4rlo.github.io/videos/still-feel.mp4",
-    "https://jeanc4rlo.github.io/videos/time2.webm",
-    "https://jeanc4rlo.github.io/videos/nobody.mp4",
-    "https://jeanc4rlo.github.io/videos/whats-wrong.webm",
-    "https://jeanc4rlo.github.io/videos/subliminal.webm"
+    "https://jeanc4rlo.github.io/half-alive/videos/sophies-house.webm",
+    "https://jeanc4rlo.github.io/half-alive/videos/dimyu.webm",
+    "https://jeanc4rlo.github.io/half-alive/videos/summerland.webm",
+    "https://jeanc4rlo.github.io/half-alive/videos/still-feel.mp4",
+    "https://jeanc4rlo.github.io/half-alive/videos/time2.webm",
+    "https://jeanc4rlo.github.io/half-alive/videos/nobody.mp4",
+    "https://jeanc4rlo.github.io/half-alive/videos/whats-wrong.webm",
+    "https://jeanc4rlo.github.io/half-alive/videos/subliminal.webm"
 ];
 
 let videoContador = 0;
