@@ -1,0 +1,11 @@
+#botao-hamburguer {
+    display: none;
+}
+
+.titulos-nav {
+    display: none;
+}
+
+.item-nav img {
+    height: 4vh;
+}

@@ -1,0 +1,125 @@
+/* CONFIGURAÇÕES GLOBAIS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 5vw 1em;
+    background-color: rgb(0, 20, 45);
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+.streaming-apps {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: fit-content;
+    width: fit-content;
+}
+
+/* CORES */
+
+p, h1, summary, details, td, th {
+    color: white;
+}
+
+a {
+    color: rgb(0, 140, 255);
+}
+
+main a:hover {
+    color: rgb(110, 190, 255);
+    text-decoration: underline;
+}
+
+main a:active {
+    color: rgb(110, 190, 255);
+}
+
+.item-nav {
+    color: white;
+}
+
+#botao-hamburguer {
+    color: white;
+}
+
+#fechar-menu {
+    color: white;
+}
+
+/* TAMANHOS DE FONTE */
+
+p {
+    font-size: 16pt;
+}
+
+h1 {
+    font-size: 38pt;
+}
+
+details {
+    font-size: 16pt;
+}
+
+.item-nav {
+    font-size: 14pt;
+}
+
+#botao-hamburguer {
+    font-size: 3vh;
+}
+
+#fechar-menu {
+    font-size: 26pt;
+}
+
+/* FONTES */
+
+h1 {
+    font-family: Tiempos Fine, serif;
+}
+
+p, summary, th {
+    font-family: Inter;
+}
+
+details, td {
+    font-family: Manrope;
+}
+
+#intro-texto p {
+    font-weight: 900;
+}
+
+#fechar-menu {
+    font-family: Inter;
+}
+
+/* CONFIGURAÇÃO DE FONTES */
+
+@font-face {
+    font-family: Inter;
+    src: url("../fontes/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("../fontes/Manrope/Manrope-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Tiempos Fine;
+    src: url("../fontes/Tiempos Fine/TestTiemposFine-Regular.otf")
+}
